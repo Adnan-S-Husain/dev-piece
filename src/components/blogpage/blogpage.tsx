@@ -35,7 +35,11 @@ export default function BlogPage({ post }: { post: Post }) {
             })}
           </div>
           <div className="flex justify-center items-center gap-2 sm:flex-col">
-            <Link className="flex justify-center items-center gap-2" href="/">
+            <Link
+              className="flex justify-center items-center gap-2"
+              href="https://adnansh.in"
+              target="_blank"
+            >
               <div className="relative flex justify-center items-center gap-4 w-12 h-12 rounded-full overflow-hidden sm:w-10 sm:h-10">
                 <SanityImage
                   className="object-cover object-top"
@@ -77,7 +81,8 @@ export default function BlogPage({ post }: { post: Post }) {
           <div className="flex w-full flex-row items-start gap-5 md:gap-2">
             <div className="">
               <Link
-                href="/"
+                href="https://adnansh.in"
+                target="_blank"
                 className="relative block h-24 w-24 overflow-hidden rounded-full border md:h-20 md:w-20"
               >
                 <SanityImage
@@ -94,7 +99,9 @@ export default function BlogPage({ post }: { post: Post }) {
                     Written by
                   </h3>
                   <h1 className="mb-5 font-heading text-2xl font-bold text-black  md:mb-2">
-                    <Link href="/">{post.author.name}</Link>
+                    <Link href="https://adnansh.in" target="_blank">
+                      {post.author.name}
+                    </Link>
                   </h1>
                 </div>
               </div>

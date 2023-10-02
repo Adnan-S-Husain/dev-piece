@@ -26,7 +26,7 @@ export default function BlogMain({ data }: { data: any }) {
           </h1>
           <p className="mt-2 text-sm font-semibold text-gray-400">
             Tech Insights, Tutorials, and How-to Advice by{" "}
-            <Link className="text-indigo-500 underline" href="/">
+            <Link className="text-indigo-500 underline" href="https://adnansh.in" target="_blank">
               Adnan S. Husain
             </Link>{" "}
           </p>
