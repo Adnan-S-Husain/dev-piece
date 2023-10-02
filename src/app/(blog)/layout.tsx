@@ -27,13 +27,6 @@ const PreviewProvider = dynamic(() => import("../../components/PreviewProvider")
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4264568309720492"
-          crossOrigin="anonymous"
-        ></script>
-      </head>
       <body>
         <ScreenWidth>
           <Sublayout>

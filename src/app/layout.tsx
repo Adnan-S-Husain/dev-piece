@@ -15,13 +15,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-V6DNDCN1PB"></Script>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-0MJQZ8RKG6"></Script>
         <Script id="google-analytics">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-V6DNDCN1PB');
+            gtag('config', 'G-0MJQZ8RKG6');
             `}
         </Script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
