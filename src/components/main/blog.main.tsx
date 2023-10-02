@@ -22,7 +22,7 @@ export default function BlogMain({ data }: { data: any }) {
       <div className="w-full max-w-[1200px] flex justify-start items-center flex-col gap-6 pt-16">
         <header className="mx-auto max-w-2xl text-center">
           <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-            DevDive: Blogs
+            Dev Piece: Blogs
           </h1>
           <p className="mt-2 text-sm font-semibold text-gray-400">
             Tech Insights, Tutorials, and How-to Advice by{" "}
