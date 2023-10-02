@@ -1,0 +1,4 @@
+Sitemap: https://devpiece.adnansh.in/api/sitemap.xml
+
+User-Agent: *
+Disallow: /admin
