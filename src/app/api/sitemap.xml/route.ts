@@ -3,6 +3,11 @@ import { client } from "@/../lib/sanity.client";
 
 export const revalidate = false;
 
+function getDate(val?: string | null) {
+  if (!val) return new Date().toISOString();
+  return new Date(val).toISOString();
+}
+
 export async function GET(req: Request) {
   const posts = (
     await client.fetch(getParamQuery, {
@@ -16,7 +21,7 @@ export async function GET(req: Request) {
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <url>
             <loc>${process.env.NEXT_PUBLIC_SITE_URL}</loc>
-            <lastmod>${new Date()}</lastmod>
+            <lastmod>${getDate()}</lastmod>
             <changefreq>weekly</changefreq>
             <priority>1</priority>
         </url>
@@ -24,7 +29,7 @@ export async function GET(req: Request) {
           return `
           <url>
             <loc>${process.env.NEXT_PUBLIC_SITE_URL}/${post.slug.current}</loc>
-            <lastmod>${post._updatedAt ? new Date(post._updatedAt) : new Date()}</lastmod>
+            <lastmod>${getDate(post._updatedAt)}</lastmod>
             <changefreq>weekly</changefreq>
             <priority>0.9</priority>
           </url>
