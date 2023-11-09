@@ -119,7 +119,7 @@ export default function BlogPage({ post, suggestions }: { post: Post; suggestion
           You might also like these articles from my blog
         </p>
       </div>
-      <div className="w-full max-w-[1200px] grid grid-cols-3 justify-items-center items-stretch gap-6 pt-5 pb-28 lg:grid-cols-2 sm:grid-cols-1 md:items-center">
+      <div className="px-7 w-full max-w-[1200px] grid grid-cols-3 justify-items-center items-stretch gap-6 pt-5 pb-28 lg:grid-cols-2 sm:grid-cols-1 md:items-center">
         {suggestions &&
           suggestions.map((post: Post, i: number) => {
             return <BlogCard key={i} post={post} />;
