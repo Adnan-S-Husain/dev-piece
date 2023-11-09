@@ -7,7 +7,7 @@ import { client } from "@/../lib/sanity.client";
 import { groq } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import { revalidate as rv } from "@/constants";
-import { redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: { slug: string };
@@ -15,6 +15,7 @@ type Props = {
 
 interface resp {
   post: Post;
+  suggestions?: Post[];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -52,11 +53,11 @@ export async function generateStaticParams() {
 export default async function Page({ params }: Props) {
   const data = await sanityFetch<resp>({ query, params: params });
   if (data?.post == null) {
-    redirect("/not-found");
+    notFound();
   }
   return (
     <LiveQuery enabled={draftMode().isEnabled} query={query} initialData={{}} as={BlogPage}>
-      <BlogPage post={data?.post} />
+      <BlogPage post={data?.post} suggestions={data?.suggestions} />
     </LiveQuery>
   );
 }
